@@ -1,0 +1,25 @@
+﻿<Window x:Class="Extract_Movie_Ratings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Extract_Movie_Ratings"
+        mc:Ignorable="d"
+        Title="Movie ratings" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition SharedSizeGroup="A" Width="*"/>
+            <ColumnDefinition SharedSizeGroup="A" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Enter one movie in a line" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="txtMovies" Grid.Row="1" Grid.Column="0" Height="300" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Movie ratings" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="txtMovieRatings" Grid.Row="1" Grid.Column="1" Height="300" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" VerticalScrollBarVisibility="Auto"/>
+        <Button Name="btnExtract" Grid.Row="2" Grid.Column="0" Width="100" Height="25" Content="Extract" Click="btnExtract_Click"/>
+    </Grid>
+</Window>
